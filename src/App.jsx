@@ -4,9 +4,14 @@ import './App.css'
 
 function App() {
 
+  const handleSearchSubmit = (e, searchValue) => {
+    e.preventDefault();
+    console.log(searchValue);
+  }
+
   return (
     <div className="app">
-      
+      <Search handleSubmit={handleSearchSubmit} />
     </div>
   )
 }
