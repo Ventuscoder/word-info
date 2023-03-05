@@ -8,6 +8,15 @@ function App() {
     // Prevent default form submit behaviour
     e.preventDefault();
     console.log(searchValue);
+
+    async function getWordData() {
+      const res = await fetch(
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${searchValue}`
+      );
+      const data = await res.json();
+      console.log(data)
+    }
+    getWordData();
   }
 
   return (
