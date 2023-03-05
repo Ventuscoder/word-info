@@ -1,0 +1,13 @@
+.search {
+    margin-top: 5%;
+}
+
+.search-input {
+    padding: 10px 30px;
+}
+
+.search-button {
+    margin-left: 10px;
+    display: inline-block;
+    padding: 10px 30px;
+}
