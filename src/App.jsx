@@ -5,6 +5,7 @@ import './App.css'
 function App() {
 
   const handleSearchSubmit = (e, searchValue) => {
+    // Prevent default form submit behaviour
     e.preventDefault();
     console.log(searchValue);
   }
