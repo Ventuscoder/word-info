@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
 
-  const [currentWord, setCurrentWord] = useState({word: '', phonetic: '', origin: '', meanings: []});
+  const [currentWord, setCurrentWord] = useState({word: '', phonetic: '', meanings: []});
 
   const handleSearchSubmit = (e, searchValue) => {
     // Prevent default form submit behaviour
@@ -21,7 +21,6 @@ function App() {
       setCurrentWord({
         word: data[0].word,
         phonetic: data[0].phonetics[0].audio,
-        origin: data[0].origin,
         meanings: data[0].meanings
       });
     }
