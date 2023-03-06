@@ -20,7 +20,7 @@ function App() {
       console.log(data);
       setCurrentWord({
         word: data[0].word,
-        phonetic: data[0].phonetic,
+        phonetic: data[0].phonetics[0].audio,
         origin: data[0].origin,
         meanings: data[0].meanings
       });
