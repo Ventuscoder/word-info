@@ -11,7 +11,7 @@ const Word = (props) => {
     return (
         <div className='d-flex justify-content-center'>
             {wordDescription.phonetic != '' ? 
-                <button onClick={playAudio} className='audio-btn'>Pronounce this word</button> : null
+                <button onClick={playAudio} className='audio-btn rounded'><i class="fa-solid fa-ear-listen"></i> Pronounce this word</button> : null
             }
         </div>
     )
