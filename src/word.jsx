@@ -5,7 +5,7 @@ const Word = (props) => {
 
     return (
         <div>
-            wordDescription.phonetic;
+            {wordDescription.phonetic}
         </div>
     )
 }
