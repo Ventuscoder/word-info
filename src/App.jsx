@@ -1,10 +1,13 @@
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 import Search from "./search";
 import Word from './word';
 import Toggle from './toggle';
 import './App.css'
 
+export const ThemeContext = createContext(null);
+
 function App() {
+  const [theme, setTheme] = useState(false);
 
   const [currentWord, setCurrentWord] = useState({word: '', phonetic: '', meanings: []});
 
@@ -29,13 +32,15 @@ function App() {
   }
 
   return (
-    <div className="container-fluid">
-      <Search handleSubmit={handleSearchSubmit} />
-      {
-        currentWord.word != '' ? <Word wordDescription={currentWord} /> : null
-      }
-      <Toggle />
-    </div>
+    <ThemeContext.Provider value={{theme, setTheme}}>
+      <div className={!theme ? 'container-fluid light' : 'container-fluid dark'}>
+        <Search handleSubmit={handleSearchSubmit} />
+        {
+          currentWord.word != '' ? <Word wordDescription={currentWord} /> : null
+        }
+        <Toggle />
+      </div>
+    </ThemeContext.Provider>
   )
 }
 

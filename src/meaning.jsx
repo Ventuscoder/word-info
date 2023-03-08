@@ -1,6 +1,10 @@
 import './meaning.css';
+import { ThemeContext } from './App';
+import { useContext } from 'react';
 
 const Meaning = (props) => {
+    const {theme} = useContext(ThemeContext);
+
     const {id, data} = props;
     const makeStr = (arr, arg) => {
         let newStr = '';
@@ -22,7 +26,7 @@ const Meaning = (props) => {
     }
 
     return (
-        <div className='meaning rounded p-1 mb-3 light' key={id}>
+        <div className={!theme ? 'meaning rounded p-1 mb-3 light' : 'meaning rounded p-1 mb-3 dark'} key={id}>
             <div className='part-speech'>as a {data.partOfSpeech}</div>
             <div className='definitions'>
                 <ol>
