@@ -15,8 +15,8 @@ const Search = (props) => {
     return (
         <div className='search d-flex justify-content-center'>
             <form className='form' onSubmit={(e)=>handleSubmit(e, search)}>
-                <input type="text" className='search-input rounded' name="search" id="search" value={search} onChange={handleChange} placeholder='Type in a word...' />
-                <button type="submit" className='search-button rounded' disabled={search.trim()===''}><i class="fa-solid fa-magnifying-glass"></i> Search this word</button>
+                <input type="text" className='search-input rounded light' name="search" id="search" value={search} onChange={handleChange} placeholder='Type in a word...' />
+                <button type="submit" className='search-button rounded light' disabled={search.trim()===''}><i class="fa-solid fa-magnifying-glass"></i> Search this word</button>
             </form>
         </div>
     )

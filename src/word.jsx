@@ -13,7 +13,7 @@ const Word = (props) => {
         <div className='word d-flex justify-content-center flex-column'>
             <div className='w mb-1'>{wordDescription.word}</div>
             {wordDescription.phonetic != '' ? 
-                <button onClick={playAudio} className='p-2 audio-btn'><i class="fa-solid fa-ear-listen"></i> Pronounce this word</button> : null
+                <button onClick={playAudio} className='p-2 audio-btn light'><i class="fa-solid fa-ear-listen"></i> Pronounce this word</button> : null
             }
             <div className='meanings'>
                 {

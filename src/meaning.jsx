@@ -22,7 +22,7 @@ const Meaning = (props) => {
     }
 
     return (
-        <div className='meaning rounded p-1 mb-3' key={id}>
+        <div className='meaning rounded p-1 mb-3 light' key={id}>
             <div className='part-speech'>as a {data.partOfSpeech}</div>
             <div className='definitions'>
                 <ol>
