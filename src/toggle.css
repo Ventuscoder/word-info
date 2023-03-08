@@ -1,0 +1,9 @@
+.toggle {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.toggle-btn {
+    background-color: white;
+}

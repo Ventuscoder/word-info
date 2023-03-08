@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Search from "./search";
 import Word from './word';
+import Toggle from './toggle';
 import './App.css'
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       {
         currentWord.word != '' ? <Word wordDescription={currentWord} /> : null
       }
+      <Toggle />
     </div>
   )
 }
