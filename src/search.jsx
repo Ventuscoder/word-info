@@ -15,9 +15,14 @@ const Search = (props) => {
         setSearch(e.target.value);
     }
 
+    const handleSearchSubmit = (e) => {
+        handleSubmit(e, search);
+        setSearch('');
+    }
+
     return (
         <div className='search d-flex justify-content-center'>
-            <form className='form' onSubmit={(e)=>handleSubmit(e, search)}>
+            <form className='form' onSubmit={handleSearchSubmit}>
                 <input type="text" className={!theme ? 'search-input rounded light' : 'search-input rounded dark'} name="search" id="search" value={search} onChange={handleChange} placeholder='Type in a word...' />
                 <button type="submit" className={!theme ? 'search-button rounded light' : 'search-button rounded dark'} disabled={search.trim()===''}><i className="fa-solid fa-magnifying-glass"></i> Search this word</button>
             </form>
