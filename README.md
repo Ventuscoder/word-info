@@ -1,6 +1,7 @@
 # word-info
 
 This is a React.js app that I made. It essentially works like a dictionary, returning the meaning of the text that the user types in a formatted manner.
+The API I used in my app belongs to the developer(s) at [Dictionary API](https://dictionaryapi.dev/).
 
 Main concepts I learnt from making this project (in no particular order) :
 1. Using an API within react
